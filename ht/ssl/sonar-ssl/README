@@ -1,0 +1,7 @@
+Sonar SSL (https://scans.io/study/sonar.ssl):
+
+wget https://scans.io/data/rapid7/sonar.ssl/20131030/20131030_certs.gz
+zcat 20131030_certs.gz | ruby sonar-ssl.rb >> sonar-ssl-hashes.txt
+wget https://scans.io/data/rapid7/sonar.ssl/20131030/20131030_hosts.gz
+zcat 20131030_hosts.gz | perl sonar-ssl-lookup.pl
+(repeat for each date)

@@ -1,0 +1,4 @@
+Sonar-HTTP (https://scans.io/study/sonar.http):
+
+wget https://scans.io/data/rapid7/sonar.http/20131029-http.gz
+zcat 20131029-http.gz | ruby sonar-http.rb

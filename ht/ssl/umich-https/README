@@ -1,0 +1,12 @@
+UMich HTTPS (https://scans.io/study/umich-https):
+
+wget https://scans.io/data/umich/https/certificates/certificates.csv.gz
+gunzip certificates.csv.gz
+ruby umich-https.rb
+cat umich-https-hits.txt | cut -d "," -f2 >> umich-https-hashes.txt
+wget https://scans.io/data/umich/https/scans/scan_2012-06-10.csv.gz
+zcat scan_2012-06-10.csv.gz | perl umich-https-lookup.pl
+cat umich-https-hashes.txt | cut -d "x" -f2 >> umich-https-hashes-nox.txt
+wget https://scans.io/data/umich/https/chains/chains_432_2013-12-28.gz
+zcat chains_432_2013-12-28.gz | perl umich-https-chain-lookup.pl
+(repeat for each date)

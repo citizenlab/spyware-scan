@@ -1,0 +1,6 @@
+Critical.IO (https://scans.io/study/sonar.cio):
+
+wget https://scans.io/data/rapid7/sonar.cio/critical_201205_21.json.bz2
+bunzip2 critical_201205_21.json.bz2
+(repeat for ports 22, 25, 53, 80, 443, 8080, and all dates)
+ruby critical-io.rb

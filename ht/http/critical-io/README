@@ -1,0 +1,5 @@
+Critical.IO (https://scans.io/study/sonar.cio):
+
+wget https://scans.io/data/rapid7/sonar.cio/critical_201205_80.json.bz2
+bunzip2 critical_201205_80.json.bz2
+ruby critical-io.rb

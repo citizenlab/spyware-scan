@@ -1,0 +1,8 @@
+Note: FinSpy servers have been updated (as of late 2013) to no longer respond to this fingerprint
+
+To check a FinSpy server:
+python 1.1.py ip port
+(Check ports 80 and 443)
+
+To emulate a FinSpy server:
+python emulate-1.1.py

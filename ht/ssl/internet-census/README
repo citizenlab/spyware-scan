@@ -1,0 +1,10 @@
+Internet Census (https://archive.org/details/internet-census-2012):
+
+wget https://archive.org/download/internet-census-2012-10/data/serviceprobes/443-TCP_SSLSessionReq.tar
+wget https://archive.org/download/internet-census-2012-10/data/serviceprobes/443-TCP_SSLv23SessionReq.tar
+tar xvf 443-TCP_SSLSessionReq.tar
+tar xvf 443-TCP_SSLv23SessionReq.tar
+cd 443-TCP_SSLSessionReq
+zpaq x 443-TCP_SSLSessionReq-1.zpaq
+cat 443-TCP_SSLSessionReq-1 | ruby internet-census.rb
+(repeat for each zpaq file and repeat for 443-TCP_SSLv23SessionReq.tar)
